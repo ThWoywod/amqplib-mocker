@@ -1,7 +1,5 @@
 import { Channel } from '../src/Channel';
 import { QueueServiceImplementation } from '../src/QueueService';
-import { Buffer } from 'Buffer';
-
 
 describe("Channel", function () {
   interface This {
