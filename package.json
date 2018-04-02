@@ -2,7 +2,7 @@
   "name": "amqplib-mocker",
   "version": "0.0.1",
   "description": "Mocker Library for amqplib, written in typescript.",
-  "main": "./lib/amqplib-mocker.js",
+  "main": "./lib/Index.js",
   "scripts": {
     "test": "jasmine-ts spec/**/*.spec.ts"
   },
