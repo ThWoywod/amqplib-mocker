@@ -1,5 +1,5 @@
-import { Channel } from '../src/Channel';
-import { QueueServiceImplementation } from '../src/QueueService';
+import { Channel } from '../../src/Channel';
+import { QueueServiceImplementation } from "../../src/QueueService";
 
 describe("Channel", function () {
   interface This {
