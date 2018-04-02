@@ -25,11 +25,70 @@ describe("E2E", function () {
     interface This {
       publishing: Publishing;
       connection: Connection;
+      channel: Channel;
     }
-    it("should push message to queue", async function (this: This) {
-      this.publishing.push("q1", new Buffer("test"));
-      const channel: Channel = await this.connection.createChannel();
-      expect(channel.getQueue("q1")).toEqual([new Buffer("test")]);
-    })
+
+    describe("message to queue q1", function (this: This) {
+      beforeEach(async function () {
+        this.publishing.push("q1", new Buffer("message"));
+        this.channel = await this.connection.createChannel();
+      })
+      it("expect queue 'q1' to equal's one message", function (this: This) {
+        expect(this.channel.getQueue("q1").length).toEqual(1);
+      });
+  
+      it("expect queue 'q1' to equal's message", function(this: This) {
+        expect(this.channel.getQueue("q1")).toEqual([
+          new Buffer("message")
+        ]);
+      });
+
+      it("expect queue 'q2' to equal's no message", function(this: This) {
+        expect(this.channel.getQueue("q2").length).toEqual(0);
+      });
+
+      it("expect queue 'q2' to equal's empty array", function(this: This) {
+        expect(this.channel.getQueue("q2")).toEqual([]);
+      });
+    });
+
+    describe("message to queue q1 and q2", function(this: This) {
+      beforeEach(async function() {
+        this.publishing.push("q1", new Buffer("message1"));
+        this.publishing.push("q2", new Buffer("message2"));
+        this.channel = await this.connection.createChannel();
+      });
+      it("expect queue 'q1' to equal's one message", function(this: This) {
+        expect(this.channel.getQueue("q1").length).toEqual(1);
+      });
+
+      it("expect queue 'q2' to equal's one message", function(this: This) {
+        expect(this.channel.getQueue("q1").length).toEqual(1);
+      });
+
+      it("expect queue 'q1' to equal's message1", function(this: This) {
+        expect(this.channel.getQueue("q1")).toEqual([
+          new Buffer("message1")
+        ]);
+      });
+
+      it("expect queue 'q2' to equal's message2", function(this: This) {
+        expect(this.channel.getQueue("q2")).toEqual([
+          new Buffer("message2")
+        ]);
+      });
+
+      it("expect queue 'q1' not to equal's message2", function(this: This) {
+        expect(this.channel.getQueue("q1")).not.toEqual([
+          new Buffer("message2")
+        ]);
+      });
+
+      it("expect queue 'q2' not to equal's message1", function(this: This) {
+        expect(this.channel.getQueue("q2")).not.toEqual([
+          new Buffer("message1")
+        ]);
+      });
+    });
   })
 })
