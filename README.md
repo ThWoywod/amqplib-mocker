@@ -1,2 +1,3 @@
-### Status
-[![Build Status](https://travis-ci.org/simkimsia/UtilityBehaviors.png)](https://travis-ci.org/ThWoywod/amqplib-mocker)
+### amqplib-mocker
+[![Build Status](https://travis-ci.org/ThWoywod/amqplib-mocker.png)](https://travis-ci.org/ThWoywod/amqplib-mocker)
+
