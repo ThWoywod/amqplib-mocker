@@ -1,1 +1,1 @@
-/// <reference path="globals/inversify/index.d.ts" />
+/// <reference path="globals/reflect-metadata/index.d.ts" />

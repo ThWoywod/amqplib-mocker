@@ -17,8 +17,6 @@ export class QueueServiceImplementation implements QueueService {
     if (options && options.readonly === false) {
       this.queues[queue] = [];
     }
-    console.log(currentQueue);
-    
     return currentQueue;
   }
 

@@ -2,6 +2,7 @@ import { QueueService, QueueServiceImplementation } from '../src/QueueService';
 import { Container } from 'inversify';
 import { TYPES } from "../src/Container";
 import { Buffer } from 'Buffer';
+
 describe("QueueService", function () {
   interface This {
     queueService: QueueService;
