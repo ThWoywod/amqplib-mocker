@@ -1,4 +1,4 @@
-import { ConnectionManager } from '../src/ConnectionManager';
+import { ConnectionManager } from "../../src/ConnectionManager";
 describe("ConnectionManager", function () {
   interface This {
     connectionManager: ConnectionManager

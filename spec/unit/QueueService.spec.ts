@@ -1,6 +1,9 @@
-import { QueueService, QueueServiceImplementation } from '../src/QueueService';
+import {
+  QueueService,
+  QueueServiceImplementation
+} from "../../src/QueueService";
 import { Container } from 'inversify';
-import { TYPES } from "../src/Container";
+import { TYPES } from "../../src/Container";
 
 describe("QueueService", function () {
   interface This {

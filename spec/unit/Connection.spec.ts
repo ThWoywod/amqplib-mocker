@@ -1,5 +1,5 @@
-import { Connection } from '../src/Connection';
-import { Channel } from '../src/Channel';
+import { Connection } from "../../src/Connection";
+import { Channel } from "../../src/Channel";
 
 describe("Connection", function () {
   interface This {
