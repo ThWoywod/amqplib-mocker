@@ -1,4 +1,3 @@
-import { Buffer } from "Buffer";
 import { QueueService } from './QueueService';
 import { container, TYPES } from "./Container";
 

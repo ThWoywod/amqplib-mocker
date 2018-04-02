@@ -8,8 +8,7 @@
     "experimentalDecorators": true,
     "strictNullChecks": true,
     "moduleResolution": "node",
-    "typeRoots": [ "node_modules/@types"  ],
-    "types": ["jasmine", "node"]
+    "typeRoots": [ "node_modules/@types"  ]
   },
   "exclude": ["node_modules", "**/*.spec.ts"]
 }
