@@ -6,12 +6,7 @@
   "scripts": {
     "test": "jasmine-ts spec/**/*.spec.ts"
   },
-  "keywords": [
-    "amqp",
-    "rabbitmq",
-    "amqplib",
-    "amqplib-mocker"
-  ],
+  "keywords": ["amqp", "rabbitmq", "amqplib", "amqplib-mocker"],
   "devDependencies": {
     "@types/amqplib": "^0.5.7",
     "@types/jasmine": "^2.8.6",
@@ -30,5 +25,11 @@
   },
   "typings": "./dts/amqplib-mocker.d.ts",
   "author": "Thorsten Woywod <mail@thorsten-woywod.de>",
+  "bugs": "https://github.com/ThWoywod/amqplib-mocker/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThWoywod/amqplib-mocker"
+  },
+  "homepage": "https://github.com/ThWoywod/amqplib-mocker",
   "license": "ISC"
 }
